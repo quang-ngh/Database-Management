@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="../../static/css/register.css">
+    <link rel="stylesheet" href="../../static/css/login.css">
+
+
+    <title>REGISTER</title>
+  </head>
+  <body>
+    <div class="container1">
+      <div class="holder1">
+          <div class="login">
+              <div class="register-box">
+                  <h1>Create an account</h1>
+                  <form method="POST" action="" id="register-form">
+                    {%csrf_token%}
+                      <div class="user-box">
+                          <input type="text" name="fullname" required=""/>
+                          <label>Fullname</label>
+                      </div>
+                      <div class="user-box">
+                          <input type="text" name="username" required=""/>
+                          <label>Username</label>
+                      </div>
+                      <!-- <div class="user-box">
+                          <input type="date" name="" required="" style="color:darkgray;"/>
+                          <label>DOB</label>
+                      </div>
+                      <div class="user-box">
+                          <input type="text" name="email" required=""/>
+                          <label>Email</label>
+                      </div>
+                      <div class="user-box">
+                        <input type="text" name="phonenumber" required=""/>
+                        <label>Phone number</label>
+                     </div>
+                      <div class="user-box">
+                          <select name="languages" id="lang" style="color:darkgray;">
+                              <option value="javascript">Male</option>
+                              <option value="php">Female</option>
+                              <option value="java">Other</option>
+                          </select>
+                          <label>Gender</label>
+                      </div> -->
+                      <div class="user-box">
+                          <input type="password" name="password" required=""/>
+                          <label>Password</label>
+                      </div>
+                      <div class="user-box">
+                          <input type="password" name="repassword" required=""/>
+                          <label>Confirm password</label>
+                      </div>
+                      <p style="margin-top:-1em;color:white">Already have an account ? <a href="/login" style="color:#03e9f4; cursor:pointer;">Sign in</a></p>
+                      <a href="#" class="btn">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                      <button action = "submit">Sign up</button>
+                      </a>
+                  </form>
+                  {% for message in messages %}
+                  <p>{{message}}</p>
+                  {%endfor%}
+              </div>
+          </div>
+          <div class="image">
+              <div class="holder"> 
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/d/de/HCMUT_official_logo.png" />
+              </div>
+              <p>By signing up, you agree with the <br></br><br></br>
+                  <a href="#"> Terms of Use </a> & 
+                  <a href="#"> Privacy Policy </a>
+              </p>
+          </div>
+      </div>
+      <div class="decoration">
+          <div class="decor0"></div>
+          <div class="decor1"></div>
+          <div class="decor2"></div>
+      </div>
+  </div>
+  
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>
